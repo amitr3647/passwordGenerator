@@ -1,0 +1,31 @@
+<div class="password-generator">
+  <div class="input-container">  
+    <div class="input">
+      <label class="password-label">Enter password length</label>  
+      <input type="number" placeholder="Enter password length" [(ngModel)]="passwordLength" min="1" max="25"/>
+    </div>
+   
+
+  <div class="checkboxes">
+   <div>
+     <input type="checkbox" [(ngModel)]="includeAlphabets"/> <span>Include alphabets</span>
+    </div>
+    <div>
+
+      <input type="checkbox"
+      [(ngModel)]="includeNumbers"
+      /> <span>Include numbers</span>
+    </div>
+    <div>
+
+      <input type="checkbox"
+      [(ngModel)]="includeSpecialChar"
+      /> <span>Include Special Characters</span>
+    </div>
+  </div>
+  <button class="btn" (click)="generatePassword()">Generate Password</button>
+</div>
+  <div class="password-container">
+  <h1> {{password}}</h1>
+  </div>
+</div>
